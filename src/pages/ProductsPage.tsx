@@ -18,7 +18,7 @@ export function ProductsPage(){
     }
 
     return(
-        <div className="container mx-auto max-w-2xl pt-5">
+        <div className="container mx-auto max-w-2xl pt-[50px]">
             {loading && <Loader />}
             {error && <ErrorMessage error={error} />}
             { products.map(product => <Product product={product} key = {product.id}/>)}
@@ -27,7 +27,7 @@ export function ProductsPage(){
                 <CreateProduct onCreate={createHandler}/>
             </Modal>}
 
-            <button className="fixed bottom-5 right-5  rounded-full bg-blue-700 text-white text-xl py-2 px-4"
+            <button className="fixed bottom-5 right-5 rounded-full bg-blue-700 text-white text-xl py-2 px-4"
                     onClick={open}>
                 {'Добавить новый продукт'}
             </button>

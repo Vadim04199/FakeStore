@@ -30,7 +30,7 @@ export function CreateProduct ({ onCreate }: CreateProductProps){
         setError('')
 
         if(value.trim(). length === 0){
-            setError('Кого наебать решил?')
+            setError('Ошибка, введите товар?')
             return
         }
         productData.title = value
